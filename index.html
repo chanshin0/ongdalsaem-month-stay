@@ -13,8 +13,8 @@
   .page { position: relative; max-width: 1920px; margin: 0 auto; }
   .page img { display: block; width: 100%; height: auto; }
 
-  /* 보이지 않는 누름 영역 2개.
-     위치·크기는 원본 이미지(1920 x 8696) 대비 비율(%)이라 어느 폭에서도 그려진 버튼과 맞는다.
+  /* 보이지 않는 누름 영역 5개.
+     위치·크기는 원본 이미지(1920 x 16568) 대비 비율(%)이라 어느 폭에서도 그려진 버튼과 맞는다.
      top 은 영역의 위쪽 끝이다(버튼 위쪽 끝보다 6px 위).
      min-height 는 좁은 화면에서 손가락으로 누를 수 있게 하는 최소 높이(조정 가능).
      좁은 화면에서 영역은 아래쪽으로만 늘어난다 — 버튼 바로 위에 있는 글줄을 덮지 않기 위해서다. */
@@ -24,10 +24,16 @@
     min-height: 44px;
     cursor: pointer;
   }
-  /* 실측 버튼: x 476..942, y 613..678 → 영역: x 470..949, y 607..685 (높이 78) */
-  .cta-top    { left: 24.479167%; width: 24.947917%; top: 6.980221%;  height: 0.896964%; }
-  /* 실측 버튼: x 700..1223, y 8428..8503 → 영역: x 694..1230, y 8422..8510 (높이 88) */
-  .cta-bottom { left: 36.145833%; width: 27.916667%; top: 96.849126%; height: 1.011960%; }
+  /* 01: 원본 버튼 x=476..942, y=726..791 */
+  .cta-01 { left: 24.47916667%; width: 24.94791667%; top: 4.34572670%; height: 0.47078706%; }
+  /* 02: 원본 버튼 x=700..1223, y=7194..7269 */
+  .cta-02 { left: 36.14583333%; width: 27.91666667%; top: 43.38483824%; height: 0.53114437%; }
+  /* 03: 원본 버튼 x=700..1223, y=11838..11913 */
+  .cta-03 { left: 36.14583333%; width: 27.91666667%; top: 71.41477547%; height: 0.53114437%; }
+  /* 04: 원본 버튼 x=700..1223, y=14010..14083 */
+  .cta-04 { left: 36.14583333%; width: 27.91666667%; top: 84.52438436%; height: 0.51907291%; }
+  /* 05: 원본 버튼 x=630..1153, y=16034..16107 */
+  .cta-05 { left: 32.50000000%; width: 27.91666667%; top: 96.74070497%; height: 0.51907291%; }
 
   /* 키보드로 이동했을 때만 보이는 초점 표시 */
   .cta:focus-visible {
@@ -39,20 +45,29 @@
 </head>
 <body>
 <main class="page">
-  <img src="2026month.jpg" width="1920" height="8696"
+  <img src="1month.jpg" width="1920" height="16568"
        alt="깊은산속 옹달샘 한달살기 — 천천히 자고, 걷고, 먹고, 책을 읽고 아무것도 하지 않는 시간도 가져봅니다.">
 
-  <!-- 상담 신청 주소 (1/2): 주소를 바꿀 때는 아래 href 와 (2/2)의 href 를 똑같이 함께 바꾼다. 주소 안의 & 는 &amp; 로 적는다. -->
-  <a class="cta cta-top"
-     href="https://www.godowoncenter.com/bbs/?mode=write&amp;b_code=maintokeeper&amp;cate=657"
-     target="_blank" rel="noopener"
-     aria-label="깊은산속 옹달샘 한달살기 상담 신청하기"></a>
+  <!-- 장유정님 안내 01 -->
+  <a class="cta cta-01" href="https://www.godowoncenter.com/bbs/?mode=write&amp;b_code=maintokeeper&amp;cate=657"
+     target="_blank" rel="noopener" aria-label="한달살기 상담 신청하기 (상단)"></a>
 
-  <!-- 상담 신청 주소 (2/2): 위 (1/2)와 똑같은 주소여야 한다. -->
-  <a class="cta cta-bottom"
-     href="https://www.godowoncenter.com/bbs/?mode=write&amp;b_code=maintokeeper&amp;cate=657"
-     target="_blank" rel="noopener"
-     aria-label="깊은산속 옹달샘 한달살기 상담 신청하기"></a>
+  <!-- 장유정님 안내 02 -->
+  <a class="cta cta-02" href="https://www.godowoncenter.com/program/look_ods.goc"
+     target="_blank" rel="noopener" aria-label="옹달샘 둘러보기"></a>
+
+  <!-- 장유정님 안내 03 -->
+  <a class="cta cta-03" href="https://www.godowoncenter.com/stay/stay_house.goc"
+     target="_blank" rel="noopener" aria-label="옹달샘 숙소 둘러보기"></a>
+
+  <!-- 장유정님 안내 04 -->
+  <a class="cta cta-04" href="https://www.godowoncenter.com/bbs/?mode=write&amp;b_code=maintokeeper&amp;cate=657"
+     target="_blank" rel="noopener" aria-label="한달살기 상담 신청하기 (이용 안내 아래)"></a>
+
+  <!-- 장유정님 안내 05 -->
+  <a class="cta cta-05" href="https://www.godowoncenter.com/bbs/?mode=write&amp;b_code=maintokeeper&amp;cate=657"
+     target="_blank" rel="noopener" aria-label="한달살기 상담 신청하기 (유의사항 아래)"></a>
+
 </main>
 </body>
 </html>
