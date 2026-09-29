@@ -1,0 +1,12 @@
+{
+  "name": "ongdalsaem-month-stay",
+  "private": true,
+  "version": "1.0.0",
+  "engines": { "node": ">=22.0.0" },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test",
+    "deploy": "npm run build && wrangler deploy"
+  },
+  "devDependencies": { "wrangler": "4.143.0" }
+}
