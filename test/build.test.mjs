@@ -9,8 +9,9 @@ import { fileURLToPath } from 'node:url';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const hashes = {
-  'index.html': '6c1b27664220947d6c898451d633fc75138fd820de4a8eaefbb9f188a0c71b7f',
-  '1month.jpg': '462024ca7d678eb9ae7dbaf5612fe56fb5c045c76aec0cf0d69c540ee7aef1b2',
+  'index.html': '1b32de37e01e8a1b8edd62f9fbd2f0193a1d5fe1eb374ee5b032f60f48ba4a18',
+  '202610_1month.jpg': '2359dc832d4ede085da484968dd650715e56583e2905b82b6fe8f925503ba314',
+  '202610_1month_mo.jpg': 'f346e9158b703b4023f7a304d01e15617d1524ff062a24dbeb959b9871099549',
 };
 
 async function fixture(t) {
@@ -22,7 +23,7 @@ async function fixture(t) {
   return dir;
 }
 
-test('only the two approved byte-identical assets are published, including after rebuild', async (t) => {
+test('only the three approved byte-identical assets are published, including after rebuild', async (t) => {
   const dir = await fixture(t);
   for (const name of ['2026month.jpg', '.env', 'docs/internal.md', '.dryforge/internal.md']) {
     await mkdir(join(dir, name, '..'), { recursive: true });
@@ -42,8 +43,8 @@ test('only the two approved byte-identical assets are published, including after
 for (const mode of ['missing', 'symlink']) {
   test(`${mode} source fails closed and clears old output`, async (t) => {
     const dir = await fixture(t);
-    await rm(join(dir, '1month.jpg'));
-    if (mode === 'symlink') await symlink(join(root, '1month.jpg'), join(dir, '1month.jpg'));
+    await rm(join(dir, '202610_1month.jpg'));
+    if (mode === 'symlink') await symlink(join(root, '202610_1month.jpg'), join(dir, '202610_1month.jpg'));
     await mkdir(join(dir, 'site-dist'));
     await writeFile(join(dir, 'site-dist/stale.txt'), 'stale');
     const result = spawnSync(process.execPath, [join(dir, 'scripts/build.mjs')]);

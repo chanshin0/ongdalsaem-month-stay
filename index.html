@@ -6,68 +6,35 @@
 <title>깊은산속 옹달샘 한달살기</title>
 <link rel="icon" href="data:,">
 <style>
-  /* 화면에는 원본 이미지 한 장만 보인다. 여백·테두리·머리말·꼬리말 없음. */
   html, body { margin: 0; padding: 0; background: #fff; }
-
-  /* 1920px 까지는 화면 폭에 맞추고, 그보다 넓으면 1920px 로 가운데 정렬(양옆 흰색). */
   .page { position: relative; max-width: 1920px; margin: 0 auto; }
   .page img { display: block; width: 100%; height: auto; }
-
-  /* 보이지 않는 누름 영역 5개.
-     위치·크기는 원본 이미지(1920 x 16568) 대비 비율(%)이라 어느 폭에서도 그려진 버튼과 맞는다.
-     top 은 영역의 위쪽 끝이다(버튼 위쪽 끝보다 6px 위).
-     min-height 는 좁은 화면에서 손가락으로 누를 수 있게 하는 최소 높이(조정 가능).
-     좁은 화면에서 영역은 아래쪽으로만 늘어난다 — 버튼 바로 위에 있는 글줄을 덮지 않기 위해서다. */
-  .cta {
-    position: absolute;
-    display: block;
-    min-height: 44px;
-    cursor: pointer;
+  /* Coordinates follow the original PC image; touch areas extend downward only. */
+  .cta { position: absolute; display: block; min-height: 44px; cursor: pointer; }
+  .cta-1 { left: 24.58333333%; top: 5.93067192%; width: 24.79166667%; height: 0.61606703%; }
+  .cta-2 { left: 36.25000000%; top: 50.37785444%; width: 27.70833333%; height: 0.67356662%; }
+  .cta-3 { left: 36.25000000%; top: 80.25299819%; width: 27.70833333%; height: 0.67356662%; }
+  .cta-4 { left: 32.60416667%; top: 95.60538853%; width: 27.70833333%; height: 0.67356662%; }
+  @media (max-width: 767px) {
+    /* Independent coordinates for the mobile artwork (720 x 12628). */
+  .cta-1 { left: 3.19444444%; top: 8.58409883%; width: 93.47222222%; height: 0.81564777%; }
+  .cta-2 { left: 3.33333333%; top: 53.19132087%; width: 94.16666667%; height: 0.81564777%; }
+  .cta-3 { left: 1.38888889%; top: 87.15552740%; width: 97.22222222%; height: 0.84732341%; }
+  .cta-4 { left: 4.02777778%; top: 96.95913842%; width: 93.33333333%; height: 0.81564777%; }
   }
-  /* 01: 원본 버튼 x=476..942, y=726..791 */
-  .cta-01 { left: 24.47916667%; width: 24.94791667%; top: 4.34572670%; height: 0.47078706%; }
-  /* 02: 원본 버튼 x=700..1223, y=7194..7269 */
-  .cta-02 { left: 36.14583333%; width: 27.91666667%; top: 43.38483824%; height: 0.53114437%; }
-  /* 03: 원본 버튼 x=700..1223, y=11838..11913 */
-  .cta-03 { left: 36.14583333%; width: 27.91666667%; top: 71.41477547%; height: 0.53114437%; }
-  /* 04: 원본 버튼 x=700..1223, y=14010..14083 */
-  .cta-04 { left: 36.14583333%; width: 27.91666667%; top: 84.52438436%; height: 0.51907291%; }
-  /* 05: 원본 버튼 x=630..1153, y=16034..16107 */
-  .cta-05 { left: 32.50000000%; width: 27.91666667%; top: 96.74070497%; height: 0.51907291%; }
-
-  /* 키보드로 이동했을 때만 보이는 초점 표시 */
-  .cta:focus-visible {
-    outline: 3px solid #0b3d91;
-    outline-offset: 2px;
-    box-shadow: 0 0 0 2px #fff;
-  }
+  .cta:focus-visible { outline: 3px solid #0b3d91; outline-offset: 2px; box-shadow: 0 0 0 2px #fff; }
 </style>
 </head>
 <body>
 <main class="page">
-  <img src="1month.jpg" width="1920" height="16568"
-       alt="깊은산속 옹달샘 한달살기 — 천천히 자고, 걷고, 먹고, 책을 읽고 아무것도 하지 않는 시간도 가져봅니다.">
-
-  <!-- 장유정님 안내 01 -->
-  <a class="cta cta-01" href="https://www.godowoncenter.com/bbs/?mode=write&amp;b_code=maintokeeper&amp;cate=657"
-     target="_blank" rel="noopener" aria-label="한달살기 상담 신청하기 (상단)"></a>
-
-  <!-- 장유정님 안내 02 -->
-  <a class="cta cta-02" href="https://www.godowoncenter.com/program/look_ods.goc"
-     target="_blank" rel="noopener" aria-label="옹달샘 둘러보기"></a>
-
-  <!-- 장유정님 안내 03 -->
-  <a class="cta cta-03" href="https://www.godowoncenter.com/stay/stay_house.goc"
-     target="_blank" rel="noopener" aria-label="옹달샘 숙소 둘러보기"></a>
-
-  <!-- 장유정님 안내 04 -->
-  <a class="cta cta-04" href="https://www.godowoncenter.com/bbs/?mode=write&amp;b_code=maintokeeper&amp;cate=657"
-     target="_blank" rel="noopener" aria-label="한달살기 상담 신청하기 (이용 안내 아래)"></a>
-
-  <!-- 장유정님 안내 05 -->
-  <a class="cta cta-05" href="https://www.godowoncenter.com/bbs/?mode=write&amp;b_code=maintokeeper&amp;cate=657"
-     target="_blank" rel="noopener" aria-label="한달살기 상담 신청하기 (유의사항 아래)"></a>
-
+  <picture>
+    <source media="(max-width: 767px)" srcset="202610_1month_mo.jpg" width="720" height="12628">
+    <img src="202610_1month.jpg" width="1920" height="12174" alt="깊은산속 옹달샘 한달살기 — 프로그램, 공간, 식사, 숙소와 신청 안내">
+  </picture>
+  <a class="cta cta-1" href="https://www.godowoncenter.com/bbs/?mode=write&amp;b_code=maintokeeper&amp;cate=657" target="_blank" rel="noopener" aria-label="깊은산속 옹달샘 한달살기 상담 신청하기 (상단)"></a>
+  <a class="cta cta-2" href="https://www.godowoncenter.com/program/look_ods.goc" target="_blank" rel="noopener" aria-label="깊은산속 옹달샘 둘러보기"></a>
+  <a class="cta cta-3" href="https://www.godowoncenter.com/stay/stay_house.goc" target="_blank" rel="noopener" aria-label="깊은산속 옹달샘 숙소 둘러보기"></a>
+  <a class="cta cta-4" href="https://www.godowoncenter.com/bbs/?mode=write&amp;b_code=maintokeeper&amp;cate=657" target="_blank" rel="noopener" aria-label="깊은산속 옹달샘 한달살기 상담 신청하기 (하단)"></a>
 </main>
 </body>
 </html>

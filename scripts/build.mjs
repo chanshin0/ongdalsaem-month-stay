@@ -4,7 +4,7 @@ import { join } from 'node:path';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const output = join(root, 'site-dist');
-const assets = ['index.html', '1month.jpg'];
+const assets = ['index.html', '202610_1month.jpg', '202610_1month_mo.jpg'];
 
 // Clear stale output first so failed builds cannot leave deployable old assets.
 await rm(output, { recursive: true, force: true });
