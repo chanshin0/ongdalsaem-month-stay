@@ -9,7 +9,7 @@ import { fileURLToPath } from 'node:url';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const hashes = {
-  'index.html': '1b32de37e01e8a1b8edd62f9fbd2f0193a1d5fe1eb374ee5b032f60f48ba4a18',
+  'index.html': '0b6d91132275a79b4f19453e34baa15836423d5dc6367cd0c43ce34794b3f5b1',
   '202610_1month.jpg': '2359dc832d4ede085da484968dd650715e56583e2905b82b6fe8f925503ba314',
   '202610_1month_mo.jpg': 'f346e9158b703b4023f7a304d01e15617d1524ff062a24dbeb959b9871099549',
 };
